@@ -1,0 +1,36 @@
+{
+  "name": "petter",
+  "productName": "Petter",
+  "version": "1.0.0",
+  "description": "A little creature that lives on your desktop and reacts to what you do",
+  "main": "main.cjs",
+  "author": "ALTAR1234",
+  "scripts": {
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "com.petter.app",
+    "productName": "Petter",
+    "executableName": "Petter",
+    "electronVersion": "45.2.1",
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "app/**",
+      "icon.png",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "shortcutName": "Petter"
+    }
+  }
+}
